@@ -27,6 +27,17 @@ Park.prototype.mostPopular = function () {
   }
 };
 
+Park.prototype.findSpecies = function (dino_type) {
+  const dinos = this.dinosaursCollected.slice(0);
+  let types = [];
+  for (let i = 0; i < dinos.length; i++) {
+    if (dinos[i].species === dino_type) {
+      types.push(dinos[i].species);
+    }
+  }
+  return types;
+};
+
 Park.prototype.totalDayVisits = function () {
   let visits = 0;
   let dinos = this.dinosaursCollected;
