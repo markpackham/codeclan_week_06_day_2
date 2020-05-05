@@ -32,7 +32,7 @@ describe("Park", function () {
   it("should be able to add a dinosaur to its collection", function () {
     park.addDinosaur(dinosaur1);
     const actual = park.dinosaursCollected.length;
-    assert.deepStrictEqual(actual, 1);
+    assert.strictEqual(actual, 1);
   });
 
   it("should be able to remove a dinosaur from its collection", function () {
@@ -40,7 +40,7 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.removeDinosaur(dinosaur1);
     const actual = park.dinosaursCollected.length;
-    assert.deepStrictEqual(actual, 1);
+    assert.strictEqual(actual, 1);
   });
 
   it("should be able to find the dinosaur that attracts the most visitors", function () {
@@ -49,7 +49,7 @@ describe("Park", function () {
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
     const actual = park.mostPopular();
-    assert.deepStrictEqual(actual, "megazord");
+    assert.strictEqual(actual, "megazord");
   });
 
   it("should be able to find all dinosaurs of a particular species", function () {
@@ -66,7 +66,7 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     const actual = park.totalDayVisits();
-    assert.deepStrictEqual(actual, 69);
+    assert.strictEqual(actual, 69);
   });
 
   it("should be able to calculate the total number of visitors per year", function () {
@@ -74,7 +74,7 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     const actual = park.totalYearVisits();
-    assert.deepStrictEqual(actual, 25185);
+    assert.strictEqual(actual, 25185);
   });
 
   it("should be able to calculate total revenue for one year", function () {
@@ -82,6 +82,6 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     const actual = park.totalYearRevenue();
-    assert.deepStrictEqual(actual, 2518500);
+    assert.strictEqual(actual, 2518500);
   });
 });
