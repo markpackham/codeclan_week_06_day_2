@@ -33,4 +33,10 @@ Park.prototype.totalYearVisits = function () {
   return year_visits;
 };
 
+Park.prototype.totalYearRevenue = function () {
+  const visits = this.totalYearVisits();
+  const revenue = this.price * visits;
+  return revenue;
+};
+
 module.exports = Park;
