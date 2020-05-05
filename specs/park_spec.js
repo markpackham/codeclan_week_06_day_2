@@ -10,6 +10,7 @@ describe("Park", function () {
     park = new Park("Yellow Stone", 100);
     dinosaur1 = new Dinosaur("t-rex", "carnivore", 50);
     dinosaur2 = new Dinosaur("raptor", "carnivore", 10);
+    dinosaur3 = new Dinosaur("raptor", "carnivore", 9);
   });
 
   it("should have a name", function () {
@@ -41,13 +42,31 @@ describe("Park", function () {
     assert.deepStrictEqual(actual, 1);
   });
 
-  it("should be able to find the dinosaur that attracts the most visitors");
+  xit("should be able to find the dinosaur that attracts the most visitors", function () {
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    const actual = park.dinosaursCollected;
+    assert.deepStrictEqual(actual, 1);
+  });
 
   it("should be able to find all dinosaurs of a particular species");
 
-  it("should be able to calculate the total number of visitors per day");
+  it("should be able to calculate the total number of visitors per day", function () {
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    const actual = park.totalDayVisits();
+    assert.deepStrictEqual(actual, 69);
+  });
 
-  it("should be able to calculate the total number of visitors per year");
+  it("should be able to calculate the total number of visitors per year", function () {
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    const actual = park.totalYearVisits();
+    assert.deepStrictEqual(actual, 25185);
+  });
 
   it("should be able to calculate total revenue for one year");
 });
