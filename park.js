@@ -4,8 +4,8 @@ const Park = function (name, price) {
   this.dinosaursCollected = [];
 };
 
-Park.prototype.addDinosaur = function () {
-  this.dinosaursCollected.push;
+Park.prototype.addDinosaur = function (dino) {
+  this.dinosaursCollected.push(dino);
 };
 
 Park.prototype.removeDinosaur = function (name) {
@@ -14,6 +14,3 @@ Park.prototype.removeDinosaur = function (name) {
 };
 
 module.exports = Park;
-
-// codeclan_week_06_day_2
-// CodeClan Week 06 Day 2 Jurassic Park
