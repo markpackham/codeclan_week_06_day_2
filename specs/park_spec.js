@@ -6,6 +6,8 @@ describe("Park", function () {
   let park;
   let dinosaur1;
   let dinosaur2;
+  let dinosaur3;
+  let dinosaur4;
   beforeEach(function () {
     park = new Park("Yellow Stone", 100);
     dinosaur1 = new Dinosaur("t-rex", "carnivore", 50);
